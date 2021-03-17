@@ -11,17 +11,18 @@ export class CreateThumbnailUseCase {
   ) {}
 
   public async execute(id: string) {
-    const user = await UserSchema.findOne({
-      _id: id
-    });
+    const user = await UserSchema.findById(id);
 
     if (!user) {
       throw new Error('User does not exists.');
     }
 
-    // const challenge = await ChallengesSchema.find()
+    const challenge = await ChallengesSchema.findOne({
+      'user.id': id
+    })
+    const { level, currentExperience, challengesCompleted } = challenge;
 
-    const html = this.thumbnailProvider.getThumbnailHtml(3, 4, 20);
+    const html = this.thumbnailProvider.getThumbnailHtml(level, challengesCompleted, currentExperience);
 
     const thumbnail = await this.chromium.getScreenshot(html);
 

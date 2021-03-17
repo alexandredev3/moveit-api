@@ -14,8 +14,18 @@ const Challenges = new Schema({
     required: true
   },
   user: {
-    type: Schema.Types.ObjectId, 
-    ref: 'User'
+    id: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    avatar: {
+      type: String,
+      required: true,
+    }
   }
 });
 

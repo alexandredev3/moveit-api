@@ -9,10 +9,6 @@ const User = new Schema({
     type: String,
     required: true
   },
-  challenge: {
-    type: Schema.Types.ObjectId, 
-    ref: 'Challenges'
-  }
 });
 
 const UserSchema = model('User', User);
