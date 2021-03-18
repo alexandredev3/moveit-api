@@ -32,7 +32,7 @@
 <img src="./.github/browser.svg" />
 
 ## :page_facing_up: Descrição
-API para gerar uma thumbnail com algumas informações do usuário para SEO, essa API faz parte do app <a href="https://github.com/alexandredev3/moveit-nlw4" target="__blank">move.it</a>. </br>
+API para gerar uma thumbnail com algumas informações do usuário, essa API faz parte do app <a href="https://github.com/alexandredev3/moveit-nlw4" target="__blank">move.it</a>. </br>
 Acesse este <a href="https://moveit-api-v2-alexandredev3.herokuapp.com/thumbnail?id=603f8c597748042ad1b292cd">Link</a> para acessar a aplicação em produção.
 
 ## :motorway: Rotas
